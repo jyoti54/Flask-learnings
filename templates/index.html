@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename="css/style.css")}}">
+    <script src ="{{url_for('static', filename="script/script.js")}}">
+    </script>
+</head>
+<body>
+    <h1>Html forms</h1>
+
+    <form action="/submit" method="post">
+        <label for="science">Science:</label>
+        <input type="text" id="science" name="science" value="0"><br>
+        <label for="maths">Maths:</label>
+        <input type="text" id="maths" name="maths" value="0"><br>
+        <label for="C" id="C">C:</label>
+        <input type="text" id="C" name="C" value="0"><br>
+        <label for="data science">Data Science:</label>
+        <input type="text" id="data science" name="data science" value="0"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Note: The form action is set to "/submit" and the method is "post". This means that when the form is submitted, the data will be sent to the "/submit" route using the POST method. You can handle this route in your Flask application to process the form data and determine if the student has passed or failed based on the scores entered.</p>
+</body>
+</html>
